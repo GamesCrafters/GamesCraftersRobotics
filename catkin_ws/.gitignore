@@ -1,4 +1,0 @@
-# Ignore build, devel, and log directories in catkin_ws
-build/
-devel/
-log/
