@@ -12,6 +12,6 @@ send "$password\r"
 expect "$ "
 
 # Navigate to the workspace and source setup files
-send "cd catkin_ws && source ~/.bashrc && source /opt/ros/noetic/setup.bash && source devel/setup.bash\r"
+send "cd GamesCraftersRobotics/catkin_ws && source ~/.bashrc && source /opt/ros/noetic/setup.bash && source devel/setup.bash\r"
 expect "$ "
 interact
