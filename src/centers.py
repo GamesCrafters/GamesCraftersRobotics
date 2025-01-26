@@ -13,7 +13,6 @@ id: Must Match GameID from UWAPI init functions
 
 def get_centers():
     return {
-        "1dchess": [[0.5 + i, 0.5] for i in range(8)],
         "allqueenschess": [[(i % 5 + 0.5) / 5, (i // 5 + 0.5) / 5] for i in range(25)],
         "dao": [[(i % 4 + 0.5) / 4, (i // 4 + 0.5) / 4] for i in range(16)],
         "dodgem": [[(i % 4 + 0.5) / 4, (i // 4 + 0.5) / 4] for i in range(16)],
@@ -21,8 +20,3 @@ def get_centers():
         "dragonsandswans": [[(i % 4 * 10 + 5) / 35, (i // 4 * 10 + 5) / 46] for i in range(16)] + [[28.7/35, 43/46], [30.2/35, 43/46], [28.7/35, 46/46], [30.2/35, 46/46]]
     }
 
-def get_pickup():
-    return [None, None]
-
-def get_capture():
-    return [None, None]
