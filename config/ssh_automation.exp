@@ -1,0 +1,17 @@
+#!/usr/bin/expect
+
+set timeout 10
+set host "10.40.193.41"     ;# Replace with the IP of the host
+set username "er"           ;# Replace with the username
+set password "Elephant"     ;# Replace with the password
+
+# SSH into the host
+spawn ssh $username@$host
+expect "password:"
+send "$password\r"
+expect "$ "
+
+# Navigate to the workspace and source setup files
+send "cd catkin_ws && source ~/.bashrc && source /opt/ros/noetic/setup.bash && source devel/setup.bash\r"
+expect "$ "
+interact

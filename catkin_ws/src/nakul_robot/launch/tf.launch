@@ -1,0 +1,20 @@
+<launch>
+  <!-- Argument for the URDF file path -->
+  <arg name="robot_description" default="/home/er/catkin_ws/src/mycobot_ros/mycobot_description/urdf/mycobot/mycobot_urdf.urdf" />
+
+  <!-- Load the URDF file into the parameter server -->
+  <param name="robot_description" textfile="$(arg robot_description)" />
+
+  <node name="pub_joint_states" pkg="nakul_robot" type="joint_states.py" output="screen" />
+
+  <!-- Robot State Publisher to publish the TF tree -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false">
+    <param name="robot_description" value="$(arg robot_description)" />
+  </node>
+
+
+  <!-- Optional: You can include a joint state publisher if necessary -->
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false"/>
+  </node> -->
+</launch>
