@@ -1,0 +1,11 @@
+<launch>
+  <!-- Run joint_trajectory.py -->
+  <node pkg="nakul_robot" type="joint_trajectory.py" name="joint_trajectory_node" output="screen">
+    <param name="use_sim_time" value="true" />
+  </node>
+
+  <!-- Run low_level_controller.py -->
+  <node pkg="nakul_robot" type="low_level_controller.py" name="plan_test_node" output="screen">
+    <param name="use_sim_time" value="true" />
+  </node>
+</launch>

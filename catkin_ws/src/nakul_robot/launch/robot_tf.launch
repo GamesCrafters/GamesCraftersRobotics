@@ -1,0 +1,17 @@
+<launch>
+    <!-- Load URDF from file -->
+    <param name="robot_description" textfile="$(find mycobot_description)/urdf/mycobot/mycobot_with_camera_flange.urdf" />
+<arg name="robot_description" default="/home/er/catkin_ws/src/mycobot_ros/mycobot_description/urdf/mycobot/mycobot_with_camera_flange.urdf" />
+
+
+  <!-- Robot State Publisher to publish the TF tree -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+    <param name="robot_description" value="$(arg robot_description)" />
+  </node>
+
+    <!-- Include the Joint State Publisher -->
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+    
+    <!-- You can add other nodes or parameters as needed -->
+</launch>
+
