@@ -26,3 +26,19 @@ def get_pickup():
 
 def get_capture():
     return [None, None]
+
+games = {"dodgem" : {4: "ar_marker_", 8: "ar_marker_", 13: "ar_marker_", 14: "ar_marker_"}}
+games = {"dodgem" : {"ar_marker_" : 4, "ar_marker_" : 8, "ar_marker_" : 13, "ar_marker_" : 14}}
+
+
+def get_piece_ARTag_frame(game, index=None):
+    # Zero indexed, initial positions of ARTags
+    if index == None:
+        return games[game]
+    else:
+        for k,v in games[game]:
+            if v == index:
+                return k
+
+def set_piece_ARTag_frame(game, end_index, frame):
+    games[game][frame] = end_index

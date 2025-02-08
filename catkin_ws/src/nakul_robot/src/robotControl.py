@@ -1,15 +1,15 @@
 import numpy as np
 import GamesCraftersRobotics.catkin_ws.src.nakul_robot.src.low_level_controller as low_level_controller
 import time
+from centers import get_piece_ARTag_frame, set_piece_ARTag_frame
+from findPiece import PieceFinder
 
 ########################################################
 def getType(gameId):
     types_of_games = {"Type4": ["3spot", "allqueenschess", "beeline", "change", "dao", "fivefieldkono", "foxandhounds", "hareandhounds", "jan", "joust", "hobaggonu"],
                       "Type6": ["dinododgem", "dodgem"],
                       "Type7": ["1dchess"]}
-    types = {"Type1" : Type1, "Type2" : Type2, "Type3" : Type3, "Type4" : Type4, "Type5" : Type5,
-            "Type6" : Type6, "Type7" : Type7, "Type8" : Type8, "Type9" : Type9, "Type10" : Type10,
-            "Type11" : Type11}
+    types = {"Type6" : Type6}
     
     for gameType in types_of_games:
         if gameId in types_of_games[gameType]:
@@ -101,25 +101,28 @@ class Type5:
 Re-Arranger + Removal
 """
 class Type6:
-    def __init__(self, centers, pickup, capture):
+    def __init__(self, game, centers, pieces, pickup=None, capture=None):
         self.centers = centers
         self.control = RobotControl()
+        self.game = game
+        self.pieces = pieces
 
     def processMove(self, move, positions=None):
         move_string_split = move.split('_')
         start_index = int(move_string_split[1])
         end_index = int(move_string_split[2])
 
-        start_cord = self.centers[start_index]
+        start_frame = get_piece_ARTag_frame(self.game, start_index)
+        set_piece_ARTag_frame(self.game, end_index, start_frame)
+        
+
+        start_cord = self.pieces[start_frame].get_position()
         end_cord = self.centers[end_index]
         return [start_cord, end_cord]
 
     def playMove(self, coords):
         before, after = coords
         self.control.play(before, after)
-
-
-
 
 
 """

@@ -1,8 +1,9 @@
 import requests
 # import moveRobot
 # from follow_display import robot
-from centers import get_centers, get_pickup, get_capture
+from centers import get_centers, get_pickup, get_capture, get_piece_ARTag_frame
 from robotControl import getType
+from findPiece import PieceFinder
 
 URL = "https://nyc.cs.berkeley.edu/universal/v1/"
 
@@ -114,18 +115,15 @@ Dynamic_URL = Static_URL + starting_position
 # List of available moves from starting position
 moves_data = requests.get(url=Dynamic_URL).json()['moves']
 
-gameType = getType(games_data[user_game]["id"])
-robotControl = gameType(centers, get_pickup(), get_capture())
+game = games_data[user_game]["id"]
+gameType = getType(game)
 
+tags = get_piece_ARTag_frame(game)
+pieces = {}
+for k, v in tags:
+    pieces[k] = PieceFinder(k)
 
-# pieces = {str(c) : "" for c in centers}
-
-#Initialize Board Pieces
-#TODO
-# pieces["[0.5, 1.5]"] = "ar_marker_0"
-# pieces["[0.5, 2.5]"] = "ar_marker_3"
-# pieces["[1.5, 3.5]"] = "ar_marker_1"
-# pieces["[2.5, 3.5]"] = "ar_marker_6"
+robotControl = gameType(game, centers, pieces, get_pickup(), get_capture())
 
 A_turn = True
 while (len(moves_data) > 0):
@@ -133,20 +131,8 @@ while (len(moves_data) > 0):
         move = pick_best_move(moves_data)
         new_position = pick_best_position(moves_data)
         move_coords = robotControl.processMove(move, [starting_position, new_position])
-        start_coord, end_coord = (str(move_coords[0]), str(move_coords[1]))
-
-        # ar_tag_piece = pieces[start_coord]
-        # pieces[end_coord] = ar_tag_piece
-        # pieces[start_coord] = ""
 
         print("A : ", move_coords)
-        flag = False
-        # while not flag:
-        #     user = input("Enter y and Press ENTER: ")
-        #     flag = user == 'y'
-        
-        # robot.pickUp(ar_tag_piece)
-        # robot.place(move_coords[1])
 
         Dynamic_URL = Static_URL + new_position
         moves_data = requests.get(url=Dynamic_URL).json()['moves']
@@ -156,21 +142,8 @@ while (len(moves_data) > 0):
         move = pick_best_move(moves_data)
         new_position = pick_best_position(moves_data)
         move_coords = robotControl.processMove(move, [starting_position, new_position])
-        start_coord, end_coord = (str(move_coords[0]), str(move_coords[1]))
-
-        # ar_tag_piece = pieces[start_coord]
-        # pieces[end_coord] = ar_tag_piece
-        # pieces[start_coord] = ""
 
         print("B : ", move_coords)
-        # flag = False
-        # while not flag:
-        #     user = input("Enter y and Press ENTER: ")
-        #     flag = user == 'y'
-        
-        # robot.pickUp(ar_tag_piece)
-        # robot.place(move_coords[1])
-        
         
         Dynamic_URL = Static_URL + new_position
         moves_data = requests.get(url=Dynamic_URL).json()['moves']
