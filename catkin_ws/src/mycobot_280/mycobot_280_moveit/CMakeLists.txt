@@ -34,11 +34,11 @@ find_package(catkin REQUIRED
 # )
 
 # Generate the messages
-generate_messages(
-  DEPENDENCIES
-  actionlib_msgs
-  control_msgs
-)
+#generate_messages(
+#  DEPENDENCIES
+#  actionlib_msgs
+#  control_msgs
+#)
 
 # Declare the catkin package and dependencies
 catkin_package(
@@ -53,10 +53,15 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-# Add the executable for the FollowJointTrajectory action server (if implemented in cpp)
-add_executable(follow_joint_trajectory_action_server src/follow_joint_trajectory_action_server.cpp)
 
-# Link the executable with necessary libraries
-target_link_libraries(follow_joint_trajectory_action_server
-  ${catkin_LIBRARIES}
-)
+# Check if the source file exists before adding the executable
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/src/follow_joint_trajectory_action_server.cpp")
+  add_executable(follow_joint_trajectory_action_server src/follow_joint_trajectory_action_server.cpp)
+
+  # Link the executable with necessary libraries
+  target_link_libraries(follow_joint_trajectory_action_server
+    ${catkin_LIBRARIES}
+  )
+else()
+  message(WARNING "src/follow_joint_trajectory_action_server.cpp not found. Skipping executable.")
+endif()

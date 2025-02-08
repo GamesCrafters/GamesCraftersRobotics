@@ -1,0 +1,5 @@
+nakul_robot
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/nakul_robot/cmake.lock /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/./cmake.lock
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/nakul_robot/lib/pkgconfig/nakul_robot.pc /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/lib/pkgconfig/nakul_robot.pc
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/nakul_robot/share/nakul_robot/cmake/nakul_robotConfig.cmake /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/share/nakul_robot/cmake/nakul_robotConfig.cmake
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/nakul_robot/share/nakul_robot/cmake/nakul_robotConfig-version.cmake /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/share/nakul_robot/cmake/nakul_robotConfig-version.cmake
