@@ -9,7 +9,7 @@
 import rospy
 import tf2_ros
 import sys
-import Quaternions
+import quaternions
 import numpy as np
 import tf
 
@@ -18,7 +18,7 @@ from std_msgs.msg import Header, String
 
 class PieceFinder():
   def __init__(self, name):
-    rospy.init_node('piece_locator_' + name, anonymous=True)
+    # rospy.init_node('piece_locator_' + name, anonymous=True)
     self.name = name
     #Create a publisher and a tf buffer, which is primed with a tf listener
     self.tfBuffer = tf2_ros.Buffer()

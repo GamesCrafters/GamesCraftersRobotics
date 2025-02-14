@@ -34,7 +34,7 @@ def get_piece_ARTag_frame(game, index=None):
     if index == None:
         return games[game]
     else:
-        for k,v in games[game]:
+        for k,v in games[game].items():
             if v == index:
                 return k
 

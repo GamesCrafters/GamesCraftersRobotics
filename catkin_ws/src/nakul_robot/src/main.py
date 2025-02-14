@@ -119,9 +119,15 @@ game = games_data[user_game]["id"]
 gameType = getType(game)
 
 tags = get_piece_ARTag_frame(game)
+import threading
+
 pieces = {}
-for k, v in tags:
-    pieces[k] = PieceFinder(k)
+for k in tags:
+    thread = threading.Thread(target=PieceFinder, args=(k,))
+    thread.daemon = True  # Allows the program to exit even if threads are running
+    thread.start()
+    pieces[k] = thread
+
 
 robotControl = gameType(game, centers, pieces, get_pickup(), get_capture())
 
