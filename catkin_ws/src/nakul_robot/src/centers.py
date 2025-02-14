@@ -27,9 +27,7 @@ def get_pickup():
 def get_capture():
     return [None, None]
 
-games = {"dodgem" : {4: "ar_marker_", 8: "ar_marker_", 13: "ar_marker_", 14: "ar_marker_"}}
-games = {"dodgem" : {"ar_marker_" : 4, "ar_marker_" : 8, "ar_marker_" : 13, "ar_marker_" : 14}}
-
+games = {"dodgem" : {"ar_marker_16" : 4, "ar_marker_13" : 8, "ar_marker_6" : 13, "ar_marker_7" : 14}}
 
 def get_piece_ARTag_frame(game, index=None):
     # Zero indexed, initial positions of ARTags

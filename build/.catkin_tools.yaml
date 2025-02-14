@@ -1,0 +1,6 @@
+devel_space: /home/er/Desktop/GamesCraftersRobotics/devel
+install: false
+install_space: /home/er/Desktop/GamesCraftersRobotics/install
+profile: default
+source_space: /home/er/Desktop/GamesCraftersRobotics/src
+workspace: /home/er/Desktop/GamesCraftersRobotics

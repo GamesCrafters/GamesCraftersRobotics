@@ -12,6 +12,11 @@
     <param name="robot_description" value="$(arg robot_description)" />
   </node>
 
+  <include file="$(find lab4_cam)/launch/run_cam.launch" />
+
+  <node name="camera_tf" pkg="nakul_robot" type="transformBroadcast.py" output="screen" />
+
+  <include file="$(find lab4_cam)/launch/ar_track.launch" />
 
   <!-- Optional: You can include a joint state publisher if necessary -->
   <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">

@@ -1,0 +1,122 @@
+[35m[1mScanning dependencies of target usb_cam[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/usb_cam.dir/src/usb_cam.cpp.o[0m
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp: In member function ‘int usb_cam::UsbCam::init_mjpeg_decoder(int, int)’:
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:368:24: warning: ‘void avcodec_register_all()’ is deprecated [-Wdeprecated-declarations]
+  368 |   avcodec_register_all();
+      |                        ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:4159:6: note: declared here
+ 4159 | void avcodec_register_all(void);
+      |      ^~~~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:368:24: warning: ‘void avcodec_register_all()’ is deprecated [-Wdeprecated-declarations]
+  368 |   avcodec_register_all();
+      |                        ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:4159:6: note: declared here
+ 4159 | void avcodec_register_all(void);
+      |      ^~~~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:386:89: warning: ‘int avpicture_alloc(AVPicture*, AVPixelFormat, int, int)’ is deprecated [-Wdeprecated-declarations]
+  386 |   avpicture_alloc((AVPicture *)avframe_rgb_, AV_PIX_FMT_RGB24, image_width, image_height);
+      |                                                                                         ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5483:5: note: declared here
+ 5483 | int avpicture_alloc(AVPicture *picture, enum AVPixelFormat pix_fmt, int width, int height);
+      |     ^~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:386:89: warning: ‘int avpicture_alloc(AVPicture*, AVPixelFormat, int, int)’ is deprecated [-Wdeprecated-declarations]
+  386 |   avpicture_alloc((AVPicture *)avframe_rgb_, AV_PIX_FMT_RGB24, image_width, image_height);
+      |                                                                                         ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5483:5: note: declared here
+ 5483 | int avpicture_alloc(AVPicture *picture, enum AVPixelFormat pix_fmt, int width, int height);
+      |     ^~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:397:90: warning: ‘int avpicture_get_size(AVPixelFormat, int, int)’ is deprecated [-Wdeprecated-declarations]
+  397 |   avframe_camera_size_ = avpicture_get_size(AV_PIX_FMT_YUV422P, image_width, image_height);
+      |                                                                                          ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5510:5: note: declared here
+ 5510 | int avpicture_get_size(enum AVPixelFormat pix_fmt, int width, int height);
+      |     ^~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:397:90: warning: ‘int avpicture_get_size(AVPixelFormat, int, int)’ is deprecated [-Wdeprecated-declarations]
+  397 |   avframe_camera_size_ = avpicture_get_size(AV_PIX_FMT_YUV422P, image_width, image_height);
+      |                                                                                          ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5510:5: note: declared here
+ 5510 | int avpicture_get_size(enum AVPixelFormat pix_fmt, int width, int height);
+      |     ^~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:398:85: warning: ‘int avpicture_get_size(AVPixelFormat, int, int)’ is deprecated [-Wdeprecated-declarations]
+  398 |   avframe_rgb_size_ = avpicture_get_size(AV_PIX_FMT_RGB24, image_width, image_height);
+      |                                                                                     ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5510:5: note: declared here
+ 5510 | int avpicture_get_size(enum AVPixelFormat pix_fmt, int width, int height);
+      |     ^~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:398:85: warning: ‘int avpicture_get_size(AVPixelFormat, int, int)’ is deprecated [-Wdeprecated-declarations]
+  398 |   avframe_rgb_size_ = avpicture_get_size(AV_PIX_FMT_RGB24, image_width, image_height);
+      |                                                                                     ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5510:5: note: declared here
+ 5510 | int avpicture_get_size(enum AVPixelFormat pix_fmt, int width, int height);
+      |     ^~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp: In member function ‘void usb_cam::UsbCam::mjpeg2rgb(char*, int, char*, int)’:
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:422:94: warning: ‘int avcodec_decode_video2(AVCodecContext*, AVFrame*, int*, const AVPacket*)’ is deprecated [-Wdeprecated-declarations]
+  422 |   decoded_len = avcodec_decode_video2(avcodec_context_, avframe_camera_, &got_picture, &avpkt);
+      |                                                                                              ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:4828:5: note: declared here
+ 4828 | int avcodec_decode_video2(AVCodecContext *avctx, AVFrame *picture,
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:422:94: warning: ‘int avcodec_decode_video2(AVCodecContext*, AVFrame*, int*, const AVPacket*)’ is deprecated [-Wdeprecated-declarations]
+  422 |   decoded_len = avcodec_decode_video2(avcodec_context_, avframe_camera_, &got_picture, &avpkt);
+      |                                                                                              ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:4828:5: note: declared here
+ 4828 | int avcodec_decode_video2(AVCodecContext *avctx, AVFrame *picture,
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:441:76: warning: ‘int avpicture_get_size(AVPixelFormat, int, int)’ is deprecated [-Wdeprecated-declarations]
+  441 |   int pic_size = avpicture_get_size(avcodec_context_->pix_fmt, xsize, ysize);
+      |                                                                            ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5510:5: note: declared here
+ 5510 | int avpicture_get_size(enum AVPixelFormat pix_fmt, int width, int height);
+      |     ^~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:441:76: warning: ‘int avpicture_get_size(AVPixelFormat, int, int)’ is deprecated [-Wdeprecated-declarations]
+  441 |   int pic_size = avpicture_get_size(avcodec_context_->pix_fmt, xsize, ysize);
+      |                                                                            ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5510:5: note: declared here
+ 5510 | int avpicture_get_size(enum AVPixelFormat pix_fmt, int width, int height);
+      |     ^~~~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:454:123: warning: ‘int avpicture_layout(const AVPicture*, AVPixelFormat, int, int, unsigned char*, int)’ is deprecated [-Wdeprecated-declarations]
+  454 |   int size = avpicture_layout((AVPicture *)avframe_rgb_, AV_PIX_FMT_RGB24, xsize, ysize, (uint8_t *)RGB, avframe_rgb_size_);
+      |                                                                                                                           ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5502:5: note: declared here
+ 5502 | int avpicture_layout(const AVPicture *src, enum AVPixelFormat pix_fmt,
+      |     ^~~~~~~~~~~~~~~~
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:454:123: warning: ‘int avpicture_layout(const AVPicture*, AVPixelFormat, int, int, unsigned char*, int)’ is deprecated [-Wdeprecated-declarations]
+  454 |   int size = avpicture_layout((AVPicture *)avframe_rgb_, AV_PIX_FMT_RGB24, xsize, ysize, (uint8_t *)RGB, avframe_rgb_size_);
+      |                                                                                                                           ^
+In file included from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/include/usb_cam/usb_cam.h:44,
+                 from /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/usb_cam/src/usb_cam.cpp:55:
+/usr/include/aarch64-linux-gnu/libavcodec/avcodec.h:5502:5: note: declared here
+ 5502 | int avpicture_layout(const AVPicture *src, enum AVPixelFormat pix_fmt,
+      |     ^~~~~~~~~~~~~~~~
+[ 50%] [32m[1mLinking CXX shared library /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/usb_cam/lib/libusb_cam.so[0m
+[ 50%] Built target usb_cam
+[35m[1mScanning dependencies of target usb_cam_node[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/usb_cam/lib/usb_cam/usb_cam_node[0m
+[100%] Built target usb_cam_node

@@ -1,5 +1,7 @@
 mycobot_280/mycobot_280_moveit
 /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/mycobot_280_moveit/cmake.lock /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/./cmake.lock
 /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/mycobot_280_moveit/lib/pkgconfig/mycobot_280_moveit.pc /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/lib/pkgconfig/mycobot_280_moveit.pc
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/mycobot_280_moveit/lib/python3/dist-packages/mycobot_280_moveit/__init__.py /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/lib/python3/dist-packages/mycobot_280_moveit/__init__.py
 /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/mycobot_280_moveit/share/mycobot_280_moveit/cmake/mycobot_280_moveitConfig-version.cmake /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/share/mycobot_280_moveit/cmake/mycobot_280_moveitConfig-version.cmake
+/home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/mycobot_280_moveit/share/mycobot_280_moveit/cmake/mycobot_280_moveit-msg-paths.cmake /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/share/mycobot_280_moveit/cmake/mycobot_280_moveit-msg-paths.cmake
 /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/.private/mycobot_280_moveit/share/mycobot_280_moveit/cmake/mycobot_280_moveitConfig.cmake /home/er/Desktop/GamesCraftersRobotics/catkin_ws/devel/share/mycobot_280_moveit/cmake/mycobot_280_moveitConfig.cmake

@@ -1,5 +1,5 @@
 import numpy as np
-import GamesCraftersRobotics.catkin_ws.src.nakul_robot.src.low_level_controller as low_level_controller
+from low_level_controller import *
 import time
 from centers import get_piece_ARTag_frame, set_piece_ARTag_frame
 from findPiece import PieceFinder
@@ -249,34 +249,34 @@ class RobotControl:
 
         flag = True
 
-        low_level_controller.gripper_status("open")
+        gripper_status("open")
         time.sleep(0.5)
 
         if flag:
-            flag = low_level_controller.plan_to_xyz(x, y, self.lift_z)
+            flag = plan_to_xyz(x, y, self.lift_z)
             time.sleep(0.5)
         if flag:
-            flag = low_level_controller.plan_to_xyz(x, y, z)
+            flag = plan_to_xyz(x, y, z)
             time.sleep(0.5)
 
-        low_level_controller.gripper_status("close")
+        gripper_status("close")
         time.sleep(0.5)
         
         if flag:
-            flag = low_level_controller.plan_to_xyz(x, y, self.lift_z)
+            flag = plan_to_xyz(x, y, self.lift_z)
             time.sleep(0.5)
         if flag:
-            flag = low_level_controller.plan_to_xyz(after_x, after_y, self.lift_z)
+            flag = plan_to_xyz(after_x, after_y, self.lift_z)
             time.sleep(0.5)
         if flag:
-            flag = low_level_controller.plan_to_xyz(after_x, after_y, after_z)
+            flag = plan_to_xyz(after_x, after_y, after_z)
             time.sleep(0.5)
 
-        low_level_controller.gripper_status("open")
+        gripper_status("open")
         time.sleep(0.5)
 
         if flag:
-            flag = low_level_controller.plan_to_xyz(after_x, after_y, self.lift_z)
+            flag = plan_to_xyz(after_x, after_y, self.lift_z)
             time.sleep(0.5)
             
         return flag

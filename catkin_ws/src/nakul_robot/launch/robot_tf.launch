@@ -1,7 +1,7 @@
 <launch>
     <!-- Load URDF from file -->
     <param name="robot_description" textfile="$(find mycobot_description)/urdf/mycobot/mycobot_with_camera_flange.urdf" />
-<arg name="robot_description" default="/home/er/catkin_ws/src/mycobot_ros/mycobot_description/urdf/mycobot/mycobot_with_camera_flange.urdf" />
+    <arg name="robot_description" default="/home/er/catkin_ws/src/mycobot_ros/mycobot_description/urdf/mycobot/mycobot_with_camera_flange.urdf" />
 
 
   <!-- Robot State Publisher to publish the TF tree -->
