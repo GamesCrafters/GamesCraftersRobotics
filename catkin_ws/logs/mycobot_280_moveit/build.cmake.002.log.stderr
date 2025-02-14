@@ -1,5 +1,0 @@
-[31m[1mCMake Error[0m at /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/mycobot_280/mycobot_280_moveit/CMakeLists.txt:60 (target_link_libraries):
-  Cannot specify link libraries for target
-  "follow_joint_trajectory_action_server" which is not built by this project.
-
-

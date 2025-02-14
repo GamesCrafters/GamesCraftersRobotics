@@ -1,5 +1,0 @@
-[33m[1mCMake Warning[0m at /home/er/Desktop/GamesCraftersRobotics/catkin_ws/src/mycobot_280/mycobot_280_moveit/CMakeLists.txt:66 (message):
-  src/follow_joint_trajectory_action_server.cpp not found.  Skipping
-  executable.
-
-
